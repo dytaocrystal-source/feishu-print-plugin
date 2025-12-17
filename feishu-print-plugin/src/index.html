@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格打印助手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 设置面板 -->
+        <div class="settings-panel">
+            <h2>打印设置</h2>
+            
+            <div class="setting-group">
+                <label>打印范围：</label>
+                <select id="printRange">
+                    <option value="current">当前视图</option>
+                    <option value="all">所有记录</option>
+                    <option value="selected">选中的记录</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label>纸张方向：</label>
+                <select id="orientation">
+                    <option value="portrait">纵向</option>
+                    <option value="landscape">横向</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label>纸张大小：</label>
+                <select id="paperSize">
+                    <option value="A4">A4</option>
+                    <option value="A3">A3</option>
+                    <option value="Letter">Letter</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="showBorder" checked>
+                    显示表格边框
+                </label>
+            </div>
+
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="showHeader" checked>
+                    显示表头
+                </label>
+            </div>
+
+            <div class="button-group">
+                <button id="previewBtn" class="btn btn-secondary">预览</button>
+                <button id="printBtn" class="btn btn-primary">打印</button>
+                <button id="exportPdfBtn" class="btn btn-success">导出PDF</button>
+            </div>
+        </div>
+
+        <!-- 预览区域 -->
+        <div class="preview-panel" id="previewPanel" style="display: none;">
+            <div class="preview-header">
+                <h3>打印预览</h3>
+                <button id="closePreview" class="btn-close">关闭</button>
+            </div>
+            <div class="preview-content" id="previewContent">
+                <!-- 预览内容将在这里生成 -->
+            </div>
+        </div>
+
+        <!-- 加载提示 -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>正在加载数据...</p>
+        </div>
+    </div>
+
+    <!-- 隐藏的打印区域 -->
+    <div id="printArea" style="display: none;"></div>
+
+    <!-- 引入飞书 SDK -->
+    <script src="https://lf3-static.bytednsdoc.com/obj/eden-cn/abjayvoz/ljhwZthlaukjlkulzlp/bitable-sdk/v1.5.0/bundle.js"></script>
+    <!-- 引入 jsPDF 用于导出 PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- 主逻辑 -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "id": "feishu-print-plugin",
+  "name": "表格打印助手",
+  "version": "1.0.0",
+  "description": "快速打印飞书多维表格，支持自定义排版",
+  "type": "block",
+  "icon": "https://lf3-static.bytednsdoc.com/obj/eden-cn/abjayvoz/ljhwZthlaukjlkulzlp/table-icon.png",
+  "scopes": [
+    "base:read",
+    "table:read",
+    "record:read",
+    "field:read"
+  ],
+  "entry": "index.html"
+}

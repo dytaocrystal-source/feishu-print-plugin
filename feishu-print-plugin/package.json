@@ -1,0 +1,16 @@
+{
+  "name": "feishu-print-plugin",
+  "version": "1.0.0",
+  "description": "飞书多维表格打印插件",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "npx http-server ./src -p 3000 -c-1"
+  },
+  "keywords": ["feishu", "plugin", "print", "table"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
